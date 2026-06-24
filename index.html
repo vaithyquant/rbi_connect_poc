@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RBI Connect — Internal Employee Network (Prototype)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ HEADER / LETTERHEAD BAND ============ -->
+  <header class="masthead">
+    <div class="masthead__inner">
+      <div class="masthead__brand">
+        <!--
+          LOGO SWAP POINT:
+          Replace "assets/logo-placeholder.svg" below with your own
+          logo file (e.g. "assets/rbi-logo.png"). Drop the image file
+          into the /assets folder first, then update the src here.
+          Recommended: square image, transparent background.
+        -->
+        <img src="assets/logo-placeholder.svg" alt="Organisation emblem" class="masthead__logo" />
+        <div class="masthead__titles">
+          <span class="masthead__org">RESERVE BANK OF INDIA</span>
+          <span class="masthead__product">RBI Connect <em>— Internal Employee Network</em></span>
+        </div>
+      </div>
+      <div class="masthead__meta">
+        <span class="masthead__tag">PROTOTYPE — INTERNAL DEMO ONLY</span>
+        <button id="resetDataBtn" class="btn btn--ghost btn--sm" title="Reset all demo data back to seed content">Reset demo data</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="shell">
+
+    <!-- ============ LEFT NAV ============ -->
+    <nav class="sidenav" aria-label="Main navigation">
+      <button class="sidenav__item is-active" data-view="profile">
+        <span class="sidenav__icon" aria-hidden="true">&#9737;</span> Profile
+      </button>
+      <button class="sidenav__item" data-view="feed">
+        <span class="sidenav__icon" aria-hidden="true">&#8635;</span> Feed
+      </button>
+      <button class="sidenav__item" data-view="qa">
+        <span class="sidenav__icon" aria-hidden="true">?</span> Q&amp;A
+      </button>
+      <button class="sidenav__item" data-view="communities">
+        <span class="sidenav__icon" aria-hidden="true">&#9737;</span> Communities &amp; Ideas
+      </button>
+
+      <div class="sidenav__divider"></div>
+
+      <div class="sidenav__card" id="sidenavProfileCard">
+        <!-- filled by app.js with current user snapshot -->
+      </div>
+    </nav>
+
+    <!-- ============ MAIN CONTENT ============ -->
+    <main class="main" id="mainContent">
+      <!-- Views are rendered into here by app.js -->
+    </main>
+
+  </div>
+
+  <footer class="footer">
+    <p>RBI Connect is an internally-pitched prototype. All names, departments, and content shown are illustrative sample data for demonstration purposes only.</p>
+  </footer>
+
+  <!-- ============ TEMPLATES ============ -->
+  <template id="tpl-toast">
+    <div class="toast"></div>
+  </template>
+
+  <script src="data.js"></script>
+  <script src="storage.js"></script>
+  <script src="render.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
